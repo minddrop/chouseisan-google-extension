@@ -1,0 +1,31 @@
+#container {
+    width: 300px;
+    user-select: none;
+}
+
+.form p {
+    line-height: 1.5em;
+}
+
+.form label {
+    display: block;
+}
+
+.form input {
+    float: right;
+    height: 1.5em;
+}
+
+.form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    resize: none;
+}
+
+.form .decision {
+    overflow: hidden;
+}
+
+.form .decision button {
+    float: right;
+}
