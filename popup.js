@@ -2,22 +2,24 @@
     var days = ["日", "月", "火", "水", "木", "金", "土"];
     var now = new Date();
     function getDateStr(date) {
-        return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        return date.getFullYear() + "-" + (month >= 10 ? month : ("0" + month)) + "-" + (day >= 10 ? day : ("0" + day));
     }
 
     document.addEventListener("DOMContentLoaded", function () {
         var main = document.forms.main;
-        var fromInit = main.from;
-        var toInit = main.to;
-        fromInit.value = getDateStr(now);
-        toInit.value = getDateStr(new Date(+now + 86400000));
+        var from = main.from;
+        var to = main.to;
+        from.value = getDateStr(now);
+        to.value = getDateStr(new Date(+now + 86400000));
 
-        main.addEventListener("submit", function (e) {
-            var from = main.from.value;
-            var to = main.to.value;
+        main.addEventListener("submit", function (event) {
+            var s = from.value;
+            var e = to.value;
             var text = main.text.value;
-            a(from, to, text);
-            e.preventDefault();
+            a(s, e, text);
+            event.preventDefault();
         });
     });
 
