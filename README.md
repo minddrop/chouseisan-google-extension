@@ -1,3 +1,5 @@
+# chouseisan-google-extention  
+
 chrome extentionによる調整さんの入力支援です。以下のurlで公開されてます。
 
 This is Google Extention helping kanji to adjust their schedule and is published in the following url.
